@@ -13,3 +13,7 @@
     repeating-linear-gradient(#1e2a3e55, #ffffff2c);
 
 }
+
+.flex {
+     display: flex;
+}
