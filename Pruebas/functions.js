@@ -9,7 +9,7 @@ function solveQuadraticEquation(a, b, c) {
       var root = -b / (2 * a);
       return [root];
     } else {
-      return []; // Retorna un array vacío si no hay raíces reales
+      return [];
     }
 }
 
@@ -29,5 +29,15 @@ function logarithm(number, base) {
     }
 }
 
+function checkNumber(number) {
+    if (number > 0) {
+      return "El número es positivo";
+    } else if (number < 0) {
+      return "El número es negativo";
+    } else {
+      return "El número es cero";
+    }
+  }
+
 //exportando las funciones
-module.exports = { solveQuadraticEquation, squareRoot, logarithm};
+module.exports = { solveQuadraticEquation, squareRoot, logarithm,checkNumber};

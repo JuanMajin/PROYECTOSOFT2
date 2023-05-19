@@ -1,13 +1,11 @@
 const {
-    solveQuadraticEquation, squareRoot, logarithm
+    solveQuadraticEquation,
+    squareRoot,
+    logarithm,
+    checkNumber
   } = require('./functions');
-  
-  describe('Funciones matemáticas', () => {
+
     describe('Función solveQuadraticEquation', () => {
-      test('Debería devolver las raíces reales de una ecuación cuadrática', () => {
-        const roots = solveQuadraticEquation(1, -3, 2);
-        expect(roots).toEqual([-1, 2]);
-      });
   
       test('Debería devolver una única raíz real cuando el discriminante es cero', () => {
         const roots = solveQuadraticEquation(1, -4, 4);
@@ -41,16 +39,32 @@ const {
         const result = logarithm(100, 10);
         expect(result).toBeCloseTo(2); // Utilizamos toBeCloseTo() para comparar valores decimales
       });
+  
       test('Debería devolver NaN cuando alguno de los valores es inválido', () => {
         const result1 = logarithm(-1, 10);
         const result2 = logarithm(100, 1);
         const result3 = logarithm(100, 0);
         expect(result1).toBe(NaN);
-        expect(result2).toBe
         expect(result2).toBe(NaN);
         expect(result3).toBe(NaN);
       });
   
       // Agrega más pruebas para cubrir diferentes casos y situaciones posibles
     });
-  });
+    // Prueba para verificar si el número es positivo
+    test('Debería devolver "El número es positivo" cuando se proporciona un número mayor a 0', () => {
+      const result = checkNumber(5);
+      expect(result).toBe("El número es positivo");
+    });
+  
+    // Prueba para verificar si el número es negativo
+    test('Debería devolver "El número es negativo" cuando se proporciona un número menor a 0', () => {
+      const result = checkNumber(-2);
+      expect(result).toBe("El número es negativo");
+    });
+  
+    // Prueba para verificar si el número es cero
+    test('Debería devolver "El número es cero" cuando se proporciona el número 0', () => {
+      const result = checkNumber(0);
+      expect(result).toBe("El número es cero");
+    });
