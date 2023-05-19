@@ -1,5 +1,5 @@
 // index.test.js
-const { sum, subtract, multiply, divide } = require("./index");
+const { sum, subtract, multiply, divide, fibonacci } = require("./prueba");
 
 test("sums two numbers", () => {
   expect(sum(1, 2)).toBe(3);
@@ -24,4 +24,10 @@ test("divides two numbers", () => {
   expect(divide(-6, 2)).toBe(-3);
   expect(divide(6, -2)).toBe(-3);
   expect(() => divide(6, 0)).toThrow("Division by zero is not allowed");
+});
+
+test("fibonacci", () =>{
+  expect(fibonacci(0)).toBe(0);
+  expect(fibonacci(1)).toBe(1);
+  expect(fibonacci(4)).toBe(3);
 });
