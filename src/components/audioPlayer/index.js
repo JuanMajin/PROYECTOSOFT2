@@ -55,6 +55,7 @@ export default function AudioPLayer({
         audioRef.current.pause();
       }
     }
+     // eslint-disable-next-line
   }, [isPlaying]);
 
   useEffect(() => {
@@ -70,6 +71,7 @@ export default function AudioPLayer({
     } else {
       isReady.current = true;
     }
+     // eslint-disable-next-line
   }, [currentIndex]);
 
   useEffect(() => {
