@@ -18,11 +18,9 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      run: 
+      run: |
           npm test
           npm run test:coverage
-
-          # Save coverage report as artifact
           mkdir coverage-artifacts
           cp -r coverage/ coverage-artifacts/
     - name: Upload Coverage Artifact
