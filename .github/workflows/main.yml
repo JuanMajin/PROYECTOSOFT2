@@ -20,7 +20,7 @@ jobs:
     - name: Run tests
       run: npm test
     - name: Test Coverage
-      uses: JuanMajin/PROYECTOSOFT2@v2
+      uses: JuanMajin/PROYECTOSOFT2@v1
       with:
         github_token: "${{ secrets.GITHUB_TOKEN }}"
         test_command: "npm run test:coverage"
