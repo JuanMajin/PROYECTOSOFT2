@@ -33,5 +33,5 @@ jobs:
     - name: Build Docker Image
       run: docker build -t proyectosoft2:latest .
     - name: Run Docker Image
-        run: docker run proyectosoft2:latest
+      run: docker run proyectosoft2:latest
     
