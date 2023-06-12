@@ -25,12 +25,13 @@ jobs:
           # Save coverage report as artifact
           mkdir coverage-artifacts
           cp -r coverage/ coverage-artifacts/
-    - name: Deploy
-      run: npm run deploy
-    - name: Build Docker Image
-      run: docker build -t proyectosoft2:latest .
     - name: Upload Coverage Artifact
       uses: actions/upload-artifact@v2
       with:
         name: coverage
         path: coverage-artifacts
+    - name: Deploy
+      run: npm run deploy
+    - name: Build Docker Image
+      run: docker build -t proyectosoft2:latest .
+    
