@@ -5,7 +5,7 @@ import { MdDashboard, MdFavorite } from "react-icons/md"
 import { FaGripfire, FaPlay } from "react-icons/fa"
 import { FaSignOutAlt } from "react-icons/fa"
 import { IoLibrary } from "react-icons/io5"
-import { MdSpaceDashboard } from "react-icons/md"
+// import { MdSpaceDashboard } from "react-icons/md"
 import apiClient from "../../spotify";
 
 export default function Sidebar() {
@@ -30,7 +30,7 @@ export default function Sidebar() {
         <SidebarButton title="Favorites" to="/favorites" icon={<MdFavorite/>}/>
         <SidebarButton title="Library" to="/library" icon={<IoLibrary/>}/>
      </div>
-     <SidebarButton title="Sig Out" to="" icon={<FaSignOutAlt/>}/>
+     <SidebarButton title="Sign Out" to="" icon={<FaSignOutAlt/>}/>
     </div>
   )
 }

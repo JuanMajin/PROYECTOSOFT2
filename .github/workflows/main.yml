@@ -1,8 +1,8 @@
-name: Test Node.js App
+name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   test:
@@ -19,6 +19,7 @@ jobs:
       run: npm ci
     - name: Run tests
       run: npm test
-
+    - name: Deploy
+      run: npm run deploy
     - name: Build Docker Image
       run: docker build -t proyectosoft2 .
