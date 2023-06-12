@@ -19,6 +19,11 @@ jobs:
       run: npm install
     - name: Run tests
       run: npm test
+    - name: Comment with Test Coverage
+        uses: JuanMajin/PROYECTOSOFT2@v2
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          test_command: "npm run test:coverage"
     - name: Deploy
       run: npm run deploy
     - name: Build Docker Image
