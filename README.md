@@ -1,8 +1,45 @@
-# Getting Started with Create React App
+# Proyecto desarrollo de software II
+
+Este es el proyecto desarrollado en el curso de desarollo de software II con el propósito de poner en práctica lo aprendido, principalmente el uso de devops que mejoran la calidad del software entregado y el trabajo en equipo; para el desarrollo usamos un reproductor de música usando react.js y Spotify Api para acceder a la información del usuario.
+
+## Pipeline
+Herramienta CI/CD Github actions
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/95255931/245276970-dd276062-4477-420b-8d42-3f0872fa19df.jpg">
+</p>
+
+## Git clone
+```
+git clone https://github.com/JuanMajin/PROYECTOSOFT2.git
+```
+
+## Requerimientos
+
+La aplicacion requiere: ```node 18.15.0``` ```docker```. Pueden instalarse mediante el archivo de requerimientos.
+
+- Instalación del archivo ```requirements.txt```
+```bash
+ install -r requirements.txt
+```
+
+## Install dependencies
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+npm install
+```
 
-## Available Scripts
+## Docker
+
+```
+docker build -t proyectosoft2
+docker run -p 3000:3000 -d proyectosoft2
+```
+## Monitoreo y despliegue
+
+El repositorio de github está conectado con un grupo de teams que envía notificaciones cada que se realiza push, y además para el despliegue se conecto con netlify la rama que usa para desplegar es develop
+
+## Available Scripts 
 
 In the project directory, you can run:
 
