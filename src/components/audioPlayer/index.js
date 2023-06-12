@@ -71,6 +71,7 @@ export default function AudioPLayer({
     } else {
       isReady.current = true;
     }
+    //work
      // eslint-disable-next-line
   }, [currentIndex]);
 
