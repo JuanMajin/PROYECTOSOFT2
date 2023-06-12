@@ -19,7 +19,7 @@ jobs:
       run: npm install
     - name: Run tests
       run: |
-
+          npm test
           npm run test:coverage
 
           # Save coverage report as artifact
