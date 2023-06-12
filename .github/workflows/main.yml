@@ -24,7 +24,7 @@ jobs:
 
           # Save coverage report as artifact
           mkdir coverage-artifacts
-          cp -r coverage/ coverage-artifacts
+          cp -r coverage/ coverage-artifacts/
     - name: Deploy
       run: npm run deploy
     - name: Build Docker Image
