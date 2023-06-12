@@ -18,12 +18,13 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run tests
-      run: npm test
-    - name: Test Coverage
-      uses: JuanMajin/PROYECTOSOFT2
-      with:
-        github_token: "${{ secrets.GITHUB_TOKEN }}"
-        test_command: "npm run test:coverage"
+      run: |
+
+          npm run test:coverage
+
+          # Save coverage report as artifact
+          mkdir coverage-artifacts
+          cp -r coverage/ coverage-artifacts
     - name: Deploy
       run: npm run deploy
     - name: Build Docker Image
