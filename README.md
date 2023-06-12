@@ -15,12 +15,7 @@ git clone https://github.com/JuanMajin/PROYECTOSOFT2.git
 
 ## Requerimientos
 
-La aplicacion requiere: ```node 18.15.0``` ```docker```. Pueden instalarse mediante el archivo de requerimientos.
-
-- Instalación del archivo ```requirements.txt```
-```bash
- install -r requirements.txt
-```
+La aplicacion requiere: ```node 18.15.0``` y ```docker```.
 
 ## Install dependencies
 
