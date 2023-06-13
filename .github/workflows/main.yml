@@ -17,6 +17,8 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm install
+    - name: Install Netlify CLI
+      run: npm install netlify-cli -g
     - name: Run tests
       run: |
           npm test
@@ -30,6 +32,9 @@ jobs:
         path: coverage-artifacts
     - name: Deploy
       run: npm run deploy
+    - name: Build and deploy to Netlify
+      run: |
+        netlify deploy --site f09f1e6a821049638d639ac2d3925fe3 --auth 9cb51e6a554843c88fc85e001298e2dc
     - name: Build Docker Image
       run: docker build -t proyectosoft2:latest .
     - name: Run Docker Image
