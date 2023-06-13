@@ -3,7 +3,7 @@
 Este es el proyecto desarrollado en el curso de desarollo de software II con el propósito de poner en práctica lo aprendido, principalmente el uso de devops que mejoran la calidad del software entregado y el trabajo en equipo; para el desarrollo usamos un reproductor de música usando react.js y Spotify Api para acceder a la información del usuario.
 
 ## Pipeline
-Herramienta CI/CD Github actions
+Herramienta CI/CD Github actions/Netlify
 <p align="center">
     <img src="https://user-images.githubusercontent.com/95255931/245276970-dd276062-4477-420b-8d42-3f0872fa19df.jpg">
 </p>
@@ -76,32 +76,41 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# CI/CD Pipeline
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este es un ejemplo de un flujo de CI/CD utilizando GitHub Actions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Pasos
 
-### Code Splitting
+1. **Checkout code**:
+   - Utiliza: `actions/checkout@v2`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Set up Node.js**:
+   - Utiliza: `actions/setup-node@v2`
+   - Versión de Node.js: 16
 
-### Analyzing the Bundle Size
+3. **Install dependencies**:
+   - Comando: `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Run tests**:
+   - Comandos:
+     ```
+     npm test
+     npm run test:coverage
+     mkdir coverage-artifacts
+     cp -r coverage/ coverage-artifacts/
+     ```
 
-### Making a Progressive Web App
+5. **Upload Coverage Artifact**:
+   - Utiliza: `actions/upload-artifact@v2`
+   - Nombre del artefacto: `coverage`
+   - Ruta: `coverage-artifacts`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. **Deploy**:
+   - Comando: `npm run deploy`
 
-### Advanced Configuration
+7. **Build Docker Image**:
+   - Comando: `docker build -t proyectosoft2:latest .`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+8. **Run Docker Image**:
+   - Comando: `docker run proyectosoft2:latest`
