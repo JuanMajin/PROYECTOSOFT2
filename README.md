@@ -78,7 +78,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 # CI/CD Pipeline
 
-Este es un ejemplo de un flujo de CI/CD utilizando GitHub Actions.
+Este es el flujo de CI/CD utilizando GitHub Actions.
 
 ## Pasos
 
