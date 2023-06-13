@@ -34,7 +34,7 @@ jobs:
       run: npm run deploy
     - name: Build and deploy to Netlify
       run: |
-        netlify deploy --site f09f1e6a821049638d639ac2d3925fe3 --auth 9cb51e6a554843c88fc85e001298e2dc
+        netlify deploy --site 7346eaa3-04bc-43e5-a2fe-13f12d50ee6a --auth lmOUm5PU1nqbz4b_TR3HCD2fBBs0dytHbCl7CW2jRw8
     - name: Build Docker Image
       run: docker build -t proyectosoft2:latest .
     - name: Run Docker Image
