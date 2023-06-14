@@ -5,7 +5,7 @@ Este es el proyecto desarrollado en el curso de desarollo de software II con el 
 ## Pipeline
 Herramienta CI/CD Github actions/Netlify
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/95255931/245312406-e0b9e612-1d63-4683-bfce-fa3b4f7c6a3f.jpg">
+    <img src="https://user-images.githubusercontent.com/95255931/245668223-04209c32-6e89-4fdf-8d5b-f63b281d0be8.jpg">
 </p>
 
 ## Git clone
