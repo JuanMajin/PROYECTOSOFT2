@@ -1,6 +1,7 @@
 import renderer from 'react-test-renderer';
 import Link from './prueba';
 
+
 it('changes the class when hovered', () => {
   const component = renderer.create(
     <Link page="http://www.facebook.com">Facebook</Link>,
@@ -41,3 +42,6 @@ describe('ProductHeader', () => {
     expect(false).toBeFalsy();
   })
 })
+
+
+
