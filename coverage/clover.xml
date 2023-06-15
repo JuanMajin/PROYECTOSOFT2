@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1686714837940" clover="3.2.0">
-  <project timestamp="1686714837940" name="All files">
-    <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3" elements="12" coveredelements="11" complexity="0" loc="7" ncloc="7" packages="1" files="1" classes="1"/>
-    <file name="prueba.js" path="C:\Users\User\Documents\UV\6 semestre\Soft II\PROYECTOSOFT2\src\__test__\prueba.js">
+<coverage generated="1686855946406" clover="3.2.0">
+  <project timestamp="1686855946406" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="3" methods="7" coveredmethods="7" elements="32" coveredelements="29" complexity="0" loc="19" ncloc="19" packages="3" files="4" classes="4"/>
+    <package name="src">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="spotify.js" path="C:\Users\User\Documents\UV\6 semestre\Soft II\PROYECTOSOFT2\src\spotify.js">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.__test__">
       <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="9" count="3" type="stmt"/>
-      <line num="11" count="3" type="stmt"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="15" count="3" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
-      <line num="19" count="3" type="stmt"/>
-    </file>
+      <file name="prueba.js" path="C:\Users\User\Documents\UV\6 semestre\Soft II\PROYECTOSOFT2\src\__test__\prueba.js">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.audioPlayer">
+      <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="controls.css" path="C:\Users\User\Documents\UV\6 semestre\Soft II\PROYECTOSOFT2\src\components\audioPlayer\controls.css">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="controls.js" path="C:\Users\User\Documents\UV\6 semestre\Soft II\PROYECTOSOFT2\src\components\audioPlayer\controls.js">
+        <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
