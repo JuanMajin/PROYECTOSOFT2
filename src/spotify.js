@@ -9,16 +9,14 @@ export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=
     "%20"
 )}&response_type=token&show_dialog=true`;
 
-const apiClient = axios.create({
-    baseURL: "https://api.spotify.com/v1/",
-  });
+axios.defaults.baseURL = "https://api.spotify.com/v1/";
 
 export const setClientToken = (token) => {
-    apiClient.interceptors.request.use(async function (config) {
+    axios.interceptors.request.use(function (config) {
         config.headers.Authorization = "Bearer " + token;
         return config;
-    });
-};
+      });
+    };
   
-export default apiClient;  
+export default axios;  
   
