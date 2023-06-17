@@ -1,0 +1,24 @@
+name: Checkly Monitoring
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Run Checkly monitor
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer cu_bf8883d3639f44c9ab2d4ee2bc773bd2" \
+            -d '{"checkId":"6d326daf-3e1f-423f-a5b8-661a44440796"}' \
+            https://api.checklyhq.com/v1/checks/6d326daf-3e1f-423f-a5b8-661a44440796/run
