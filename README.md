@@ -2,11 +2,33 @@
 
 Este es el proyecto desarrollado en el curso de desarollo de software II con el propósito de poner en práctica lo aprendido, principalmente el uso de devops que mejoran la calidad del software entregado y el trabajo en equipo; para el desarrollo usamos un reproductor de música usando react.js y Spotify Api para acceder a la información del usuario.
 
-## Pipeline
+## Diagrama pipeline
 Herramienta CI/CD Github actions/Netlify
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/95255931/245668223-04209c32-6e89-4fdf-8d5b-f63b281d0be8.jpg">
+    <img src="https://user-images.githubusercontent.com/95255931/246637630-308f79d5-ddec-4078-9b41-d550469573d8.jpg">
 </p>
+
+## Comunicación
+
+El repositorio está conectado con teams para realizar notificaciones cada que se realiza push, otras notificaciones son recibidas por medio de correo y para la planeación y ejecución de las historias de usuario y demás tareas se utilizo jira.
+
+## Herramienta de integración
+
+Se utiliza github actions que cuenta con 3 flujos de trabajo, el principal llamado pipeline CI/CD realiza las instalaciones necesarias para posteriormente ejecutar pruebas, realizar el build y el despliegue y también ejecutar la imagen en docker, los otros flujos son para realizar el escaneo con sonarcloud y otro para el monitoreo con checkly.
+
+## Pruebas
+
+Las pruebas unitarias se realizan en la rama de test se utilizo jest y se ejecutan en el actions también en sonarcloud se revisa la cobertura y detecta otros posibles problemas en la calidad del código.
+
+## Despliegue
+
+El repositorio de github está conectado con Netlify que se actualiza cada que se realiza push a la rama develop.
+
+
+## Monitoreo
+
+Para monitorear la aplicación se utilizo chekly si bien es una plataforma paga, ofrece una muestra gratuita por cierto tiempo, en caso de finalizar existen otras herramientas similares que permiter realizar el monitoreo de manera gratuita.
+
 
 ## Git clone
 ```
@@ -30,9 +52,6 @@ npm install
 docker build -t proyectosoft2
 docker run -p 3000:3000 -d proyectosoft2
 ```
-## Monitoreo y despliegue
-
-El repositorio de github está conectado con un grupo de teams que envía notificaciones cada que se realiza push, y además para el despliegue se conecto con netlify la rama que usa para desplegar es develop
 
 ## Available Scripts 
 
